@@ -1,0 +1,108 @@
+
+  para instalar typescript se requiere tener instalado node y npm
+
+  npm init -y
+
+
+  El flag -y responderá "sí" a todas las preguntas, creando un archivo package.json con
+  las configuraciones predeterminadas.
+
+  npm install --save-dev typescript
+
+  el comando anterior y El flag --save-dev agrega TypeScript a la sección devDependencies
+  del package.json y esto hara que quede en local.
+
+  NOTA IMPORTANTE => Typescript siempre se instala localmente, ya que al ser
+  usado en otros proyectos como angular vuejs etc, estos ya vienen con su typescript config
+  por defecto y pueden entrar en conflicto
+
+
+  Typescript toma nuestro codigo typescript
+
+  traduce a motores ecmascript 6s decir compila a ECS3, ECS5, ECS3
+
+  y lo traduce a js vanilla
+
+
+  cuando ejecutamos en la terminal
+
+  npx tsc src\archivo.ts
+
+   typescript tratara de convertir a la version mas
+  antigua de typescript ES3
+
+  para que funcione debemos usar target (desde la terminal), asi:
+
+  npx tsc src\archivo.ts --target es6
+
+
+  para que todo el js ya corregido por typescript se almacece se crea
+  la carpeta dist (distribution), y el comando se actualiza, para que todo lo que sea
+  ejecutado con typescript pase a la carpeta dist
+
+  npx tsc src\archivo.ts --target es6 --outDir dist
+
+  o hacer que todos los archivos .ts vayan a esa carpeta
+
+  npx tsc src\*.ts --target es6 --outDir dist
+
+  luego de eso se puede ejecutar el archivo.js desde la terminal con node
+
+  node dist/hello.js
+
+  nota: existe una herramienta llamada DENO, que se usa para que se
+  ejecuten archivostypescript directamente como si fueran js, aun no es tan popular.
+
+
+  TSconfig.json
+
+  desde este archivo podemos realizar modificaciones, para que la ejecucion no sea tan larga
+  y no debamos usar targets --target
+
+  para crear este archivo se ejecuta
+
+  npx tsc --init
+
+  se nos muestra su configuracion: Created a new tsconfig.json with:
+                                                                                                                     TS
+  target: es2016
+  module: commonjs
+  strict: true
+  esModuleInterop: true
+  skipLibCheck: true
+  forceConsistentCasingInFileNames: true
+
+
+You can learn more at https://aka.ms/tsconfig
+
+el archivo ts config contiene varias opciones la mayoria comentadas
+y otras que no estan comentadas es decir estan activas por defecto
+por ejemplo descomentamos outDir y señalamos la ruta a la carpeta dist, lo mismo que hicimos
+anteriormente mediante comandos
+
+   "outDir": "./dist",         descomentamos dentro del archivo tsconfig.json
+
+Ahora al ejecutar
+
+npx tsc
+
+el hara todo lo configurado anteriormente sin flags ni nada mas hasta guardar en dist los
+archivos.js, ahora los archivos generados tienen 'use strict' por lo que son mas estrictos
+con los errores, en la terminal se visualizan los posibles errores, pero aun asi
+se crean los archivos js.
+
+-- watch
+
+Si ejecutamos con --watch, esto hara que los archivos.js generados, esten siempre escuchando,
+las modificaciones en su correspondiente archivo .ts y se vayan ajustando en el archivo .js
+a medida que se van modificando
+
+npx tsc --watch
+
+EL TIPADO EN TYPESCRIPT
+
+
+
+
+
+
