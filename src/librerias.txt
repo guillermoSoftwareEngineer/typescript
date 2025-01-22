@@ -29,4 +29,11 @@ npm i lodash
 
 esta libreria no usa import ni export asi que no se puede trabajar modularmente typescript
 
+se recomienda el uso de
+
+npm i --save-dev @types/lodash
+npm i --save-dev @types/libreriaAUsar
+
+desde la terminal
+
 

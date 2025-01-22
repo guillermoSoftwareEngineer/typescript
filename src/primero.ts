@@ -54,4 +54,7 @@
     const rta = `${person.name} ${person.lastName} tiene un límite de ${limit}`; // Corregido
     console.log(rta);
   })();
+
+
+
 })();
