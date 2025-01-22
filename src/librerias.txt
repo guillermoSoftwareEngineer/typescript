@@ -1,0 +1,32 @@
+USO DE LIBRERIAS CON SOPORTE PARA TYPESCRIPT
+
+existen librerias de typescript, como date-funciones
+para manipulacion de fechas
+
+enlace: https://date-fns.org/
+
+si al ir al repositorio de la libreria, aparece un tsconfig
+es muy seguro que la libreria tiene soporte para typescript
+para esta libreria  date-fns en la pagina en documentacion instalacion
+veremos el comando de instalacion, para la terminal
+
+npm install date-fns --save   (si se usa npm)
+# or
+yarn add date-fns             (si se usa yarn)
+
+
+USO DE LIBRERIAS SIN SOPORTE PARA TYPESCRIPT
+
+existe la libreria Lodash sin soporte para typescript comolodash
+https://lodash.com/
+
+si se revisa el repositorio en github se aprecia que no hay archivo
+tsconfig entonces no soporta typescript
+
+instalamos mediante:
+
+npm i lodash
+
+esta libreria no usa import ni export asi que no se puede trabajar modularmente typescript
+
+

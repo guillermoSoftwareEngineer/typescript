@@ -1,0 +1,27 @@
+Los modulos, permiten dejar de usar la funcion anonima con
+autollamado
+
+(()=>{
+
+})()
+
+Y en su lugar se usa edit_locationimport y export desde
+archivos diferentes
+
+producto.model.ts contiene los tipos de archivos para ser reutilizados, se usa la palabra export
+para permitir que sean usados dentro del scope del archivo
+
+en product services.ts para usarlos los llamamos mediante import con
+la siguiente estructura:
+
+import {Sizes,Product} from './producto.model'
+
+dentro de { } van los datos que debo usar en las otras partes
+
+y en from la ruta de la que provienen
+
+en el archivo products.services.ts las funciones que operan el objeto fueron
+declaradas con export, lo que permite, que seas usadas en otros archivos
+como en el
+ main.ts
+
